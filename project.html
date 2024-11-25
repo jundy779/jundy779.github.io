@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyek Saya</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f8f9fa;
+    }
+
+    /* Project Section */
+    #projects {
+      background: #007bff;
+      color: #fff;
+      padding: 80px 0;
+    }
+    #projects .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    #projects .section-title h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      color: #ffc107;
+    }
+    #projects .section-title p {
+      font-size: 1rem;
+      color: #e0e0e0;
+    }
+
+    /* Project Cards */
+    .project-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      margin-bottom: 30px;
+    }
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+    .project-card img {
+      border-radius: 8px 8px 0 0;
+      width: 100%;
+      height: auto;
+    }
+    .project-card .card-body {
+      padding: 20px;
+    }
+    .project-card h3 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #007bff;
+      margin-bottom: 15px;
+    }
+    .project-card p {
+      font-size: 1rem;
+      color: #555;
+    }
+    .project-card .btn-view {
+      background: #ffc107;
+      color: #000;
+      font-weight: 600;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    .project-card .btn-view:hover {
+      background: #fff;
+      color: #007bff;
+    }
+
+    /* Detailed Description */
+    .project-details {
+      display: none;
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Back Button */
+    .btn-back {
+      background: #fff;
+      color: #007bff;
+      font-weight: 600;
+      padding: 12px 25px;
+      border: 2px solid #007bff;
+      border-radius: 25px;
+      text-align: center;
+      display: inline-block;
+      text-decoration: none;
+      margin-top: 40px;
+      transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+    .btn-back:hover {
+      background: #007bff;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Project Section -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-title">
+        <h2>Proyek Saya</h2>
+        <p>Berikut adalah beberapa proyek yang telah saya kerjakan. Klik untuk melihat lebih lanjut!</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="project-card">
+            <img src="assets/img/project1.jpg" alt="Project 1">
+            <div class="card-body">
+              <h3>Proyek A</h3>
+              <p>Deskripsi singkat mengenai proyek A. Menceritakan tentang teknologi dan hasil yang dicapai.</p>
+              <button class="btn-view" onclick="toggleDetails('project-a-details')">Lihat Detail</button>
+              <div id="project-a-details" class="project-details">
+                <p>Detail lengkap mengenai proyek A. Proyek ini menggunakan teknologi X, Y, dan Z untuk mencapai tujuan ABC. Tantangan utama yang dihadapi adalah...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="project-card">
+            <img src="assets/img/project1.jpg" alt="Project 2">
+            <div class="card-body">
+              <h3>Proyek B</h3>
+              <p>Deskripsi singkat mengenai proyek B. Menceritakan tentang tantangan yang dihadapi dan solusi yang ditemukan.</p>
+              <button class="btn-view" onclick="toggleDetails('project-b-details')">Lihat Detail</button>
+              <div id="project-b-details" class="project-details">
+                <p>Detail lengkap mengenai proyek B. Proyek ini bertujuan untuk menyelesaikan masalah X dan menggunakan teknologi A dan B untuk mencapainya...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="project-card">
+            <img src="assets/img/project1.jpg" alt="Project 3">
+            <div class="card-body">
+              <h3>Proyek C</h3>
+              <p>Deskripsi singkat mengenai proyek C. Menjelaskan fitur unggulan dan hasil yang dicapai.</p>
+              <button class="btn-view" onclick="toggleDetails('project-c-details')">Lihat Detail</button>
+              <div id="project-c-details" class="project-details">
+                <p>Detail lengkap mengenai proyek C, termasuk fitur unggulan dan hasil akhir yang sangat positif. Teknologi yang digunakan adalah...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="index.html" class="btn-back">Kembali ke Halaman Utama</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function toggleDetails(projectId) {
+      const details = document.getElementById(projectId);
+      if (details.style.display === "none" || details.style.display === "") {
+        details.style.display = "block";
+      } else {
+        details.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
