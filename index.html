@@ -6,8 +6,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Muhammad Jundy Rabbani</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="Muhammad Jundy Rabbani, Android VPN Developer, Digital Marketing, Portfolio" name="keywords">
+  <meta content="Portfolio of Muhammad Jundy Rabbani, showcasing skills in Android VPN development and Digital Marketing." name="description">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -71,6 +71,8 @@
     }
     #navbar .nav-link:hover {
       color: #ffc107;
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in-out;
     }
     #navbar .nav-link.active {
       color: #ffc107;
@@ -87,6 +89,8 @@
     #navbar .btn-contact:hover {
       background: #fff;
       color: #007bff;
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in-out;
     }
     /* Responsive Adjustments */
     @media (max-width: 991.98px) {
@@ -127,7 +131,7 @@
                 <a class="nav-link" href="portfolio-details.html">Portfolio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="project.html">project</a>
+                <a class="nav-link" href="project.html">Project</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link btn-contact" href="contact.html">Contact</a>
@@ -178,7 +182,7 @@
           <div class="section-title text-center">
               <h2>About Me</h2>
               <p class="text-muted">
-                  Profesional TI yang berorientasi detail dengan pengalaman 3 tahun sebagai bisnis Digital di PT. Terampil dalam mengoperasikan berbagai platform, memiliki kemampuan pemrograman, dan mampu menjelaskan masalah software yang kompleks dalam istilah yang mudah dipahami.
+                  Profesional TI yang berorientasi detail dengan pengalaman 3 tahun sebagai bisnis Digital di PT. Terampil dalam mengoperasikan berbagai platform, memiliki kemampuan pemrograman, dan mampu menjelaskan masalah software yang kompleks dalam istilah yang mudah dipahami. Saya juga memiliki keahlian dalam pengembangan aplikasi Android dan strategi pemasaran digital.
               </p>
           </div>
   
@@ -403,6 +407,56 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <div class="whatsapp-icon" style="position: fixed; bottom: 20px; left: 20px; z-index: 1000;">
+    <a href="https://wa.me/085156218249" target="_blank" style="color: #25D366; font-size: 2rem;">
+        <i class="bx bxl-whatsapp"></i>
+    </a>
+  </div>
+
+  <button id="darkModeToggle" class="btn btn-outline-secondary" style="position: fixed; top: 20px; right: 20px; z-index: 1000; background-color: #007bff; color: white; border: none; padding: 10px 15px; border-radius: 5px;">
+    <i class="bi bi-moon"></i> Dark Mode
+  </button>
+
+  <style>
+    body.dark-mode {
+        background-color: #121212;
+        color: #ffffff;
+    }
+    body.dark-mode #navbar {
+        background: linear-gradient(90deg, #1a1a1a, #333);
+    }
+    body.dark-mode .nav-link {
+        color: #ffffff;
+    }
+    body.dark-mode .nav-link:hover {
+        color: #ffc107;
+    }
+    body.dark-mode .btn-contact {
+        background: #ffc107;
+        color: #000;
+    }
+    body.dark-mode .btn-contact:hover {
+        background: #ffffff;
+        color: #007bff;
+    }
+  </style>
+
+  <script>
+    document.getElementById('darkModeToggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        const icon = this.querySelector('i');
+        if (document.body.classList.contains('dark-mode')) {
+            icon.classList.remove('bi-moon');
+            icon.classList.add('bi-sun');
+            this.innerHTML = '<i class="bi bi-sun"></i> Light Mode';
+        } else {
+            icon.classList.remove('bi-sun');
+            icon.classList.add('bi-moon');
+            this.innerHTML = '<i class="bi bi-moon"></i> Dark Mode';
+        }
+    });
+  </script>
 
 </body>
 
