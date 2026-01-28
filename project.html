@@ -1,176 +1,124 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyek Saya</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Proyek Saya - Muhammad Jundy Rabbani</title>
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/material-3-theme.css" rel="stylesheet">
+
   <style>
-    /* Global Styles */
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: #f8f9fa;
-    }
-
-    /* Project Section */
-    #projects {
-      background: #007bff;
-      color: #fff;
-      padding: 80px 0;
-    }
-    #projects .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    #projects .section-title h2 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      color: #ffc107;
-    }
-    #projects .section-title p {
-      font-size: 1rem;
-      color: #e0e0e0;
-    }
-
-    /* Project Cards */
-    .project-card {
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease-in-out;
-      margin-bottom: 30px;
-    }
-    .project-card:hover {
-      transform: translateY(-10px);
-    }
-    .project-card img {
-      border-radius: 8px 8px 0 0;
-      width: 100%;
-      height: auto;
-    }
-    .project-card .card-body {
-      padding: 20px;
-    }
-    .project-card h3 {
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: #007bff;
-      margin-bottom: 15px;
-    }
-    .project-card p {
-      font-size: 1rem;
-      color: #555;
-    }
-    .project-card .btn-view {
-      background: #ffc107;
-      color: #000;
-      font-weight: 600;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 25px;
-      transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-      cursor: pointer;
-    }
-    .project-card .btn-view:hover {
-      background: #fff;
-      color: #007bff;
-    }
-
-    /* Detailed Description */
-    .project-details {
-      display: none;
-      margin-top: 20px;
-      font-size: 1rem;
-      color: #555;
-    }
-
-    /* Back Button */
-    .btn-back {
-      background: #fff;
-      color: #007bff;
-      font-weight: 600;
-      padding: 12px 25px;
-      border: 2px solid #007bff;
-      border-radius: 25px;
-      text-align: center;
-      display: inline-block;
-      text-decoration: none;
-      margin-top: 40px;
-      transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-    }
-    .btn-back:hover {
-      background: #007bff;
-      color: #fff;
-    }
+      /* Project Specific Styles not in theme */
+      .project-details {
+          display: none;
+          margin-top: 15px;
+          padding-top: 15px;
+          border-top: 1px solid var(--md-sys-color-outline);
+      }
   </style>
 </head>
-<body>
-  <!-- Project Section -->
-  <section id="projects">
-    <div class="container">
-      <div class="section-title">
-        <h2>Proyek Saya</h2>
-        <p>Berikut adalah beberapa proyek yang telah saya kerjakan. Klik untuk melihat lebih lanjut!</p>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <div class="project-card">
-            <img src="assets/img/project1.jpg" alt="Project 1">
-            <div class="card-body">
-              <h3>Proyek A</h3>
-              <p>Deskripsi singkat mengenai proyek A. Menceritakan tentang teknologi dan hasil yang dicapai.</p>
-              <button class="btn-view" onclick="toggleDetails('project-a-details')">Lihat Detail</button>
-              <div id="project-a-details" class="project-details">
-                <p>Detail lengkap mengenai proyek A. Proyek ini menggunakan teknologi X, Y, dan Z untuk mencapai tujuan ABC. Tantangan utama yang dihadapi adalah...</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="project-card">
-            <img src="assets/img/project1.jpg" alt="Project 2">
-            <div class="card-body">
-              <h3>Proyek B</h3>
-              <p>Deskripsi singkat mengenai proyek B. Menceritakan tentang tantangan yang dihadapi dan solusi yang ditemukan.</p>
-              <button class="btn-view" onclick="toggleDetails('project-b-details')">Lihat Detail</button>
-              <div id="project-b-details" class="project-details">
-                <p>Detail lengkap mengenai proyek B. Proyek ini bertujuan untuk menyelesaikan masalah X dan menggunakan teknologi A dan B untuk mencapainya...</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="project-card">
-            <img src="assets/img/project1.jpg" alt="Project 3">
-            <div class="card-body">
-              <h3>Proyek C</h3>
-              <p>Deskripsi singkat mengenai proyek C. Menjelaskan fitur unggulan dan hasil yang dicapai.</p>
-              <button class="btn-view" onclick="toggleDetails('project-c-details')">Lihat Detail</button>
-              <div id="project-c-details" class="project-details">
-                <p>Detail lengkap mengenai proyek C, termasuk fitur unggulan dan hasil akhir yang sangat positif. Teknologi yang digunakan adalah...</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="text-center">
-        <a href="index.html" class="btn-back">Kembali ke Halaman Utama</a>
-      </div>
-    </div>
-  </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<body>
+
+  <main id="main">
+    <section id="projects" class="portfolio section-bg" style="min-height: 100vh; padding-top: 60px;">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Proyek Saya</h2>
+          <p>Berikut adalah beberapa proyek yang telah saya kerjakan. Klik untuk melihat lebih lanjut!</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
+            <div class="card w-100 shadow-sm border-0">
+              <img src="assets/img/project1.jpg" class="card-img-top" alt="Project A" onerror="this.src='assets/img/portfolio/portfolio-1.jpg'">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-primary fw-bold">Proyek A</h5>
+                <p class="card-text">Deskripsi singkat mengenai proyek A. Menceritakan tentang teknologi dan hasil yang dicapai.</p>
+                <div class="mt-auto">
+                    <button class="btn btn-outline-primary rounded-pill w-100" onclick="toggleDetails('project-a-details')">Lihat Detail</button>
+                    <div id="project-a-details" class="project-details">
+                        <p class="small text-muted">Detail lengkap mengenai proyek A. Proyek ini menggunakan teknologi X, Y, dan Z untuk mencapai tujuan ABC. Tantangan utama yang dihadapi adalah...</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
+            <div class="card w-100 shadow-sm border-0">
+              <img src="assets/img/project1.jpg" class="card-img-top" alt="Project B" onerror="this.src='assets/img/portfolio/portfolio-2.jpg'">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-primary fw-bold">Proyek B</h5>
+                <p class="card-text">Deskripsi singkat mengenai proyek B. Menceritakan tentang tantangan yang dihadapi dan solusi yang ditemukan.</p>
+                <div class="mt-auto">
+                    <button class="btn btn-outline-primary rounded-pill w-100" onclick="toggleDetails('project-b-details')">Lihat Detail</button>
+                    <div id="project-b-details" class="project-details">
+                        <p class="small text-muted">Detail lengkap mengenai proyek B. Proyek ini bertujuan untuk menyelesaikan masalah X dan menggunakan teknologi A dan B untuk mencapainya...</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-4">
+            <div class="card w-100 shadow-sm border-0">
+              <img src="assets/img/project1.jpg" class="card-img-top" alt="Project C" onerror="this.src='assets/img/portfolio/portfolio-3.jpg'">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-primary fw-bold">Proyek C</h5>
+                <p class="card-text">Deskripsi singkat mengenai proyek C. Menjelaskan fitur unggulan dan hasil yang dicapai.</p>
+                <div class="mt-auto">
+                    <button class="btn btn-outline-primary rounded-pill w-100" onclick="toggleDetails('project-c-details')">Lihat Detail</button>
+                    <div id="project-c-details" class="project-details">
+                        <p class="small text-muted">Detail lengkap mengenai proyek C, termasuk fitur unggulan dan hasil akhir yang sangat positif. Teknologi yang digunakan adalah...</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-secondary">Kembali ke Halaman Utama</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <button id="darkModeToggle" class="btn btn-outline-secondary">
+    <i class="bi bi-moon"></i> Dark Mode
+  </button>
+
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/js/main.js"></script>
 
   <script>
     function toggleDetails(projectId) {
       const details = document.getElementById(projectId);
       if (details.style.display === "none" || details.style.display === "") {
         details.style.display = "block";
+        details.style.animation = "fadeIn 0.5s";
       } else {
         details.style.display = "none";
       }
