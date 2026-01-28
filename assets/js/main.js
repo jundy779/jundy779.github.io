@@ -266,4 +266,43 @@
    */
   new PureCounter();
 
+  /**
+   * Dark Mode Toggle
+   */
+  const darkModeToggle = select('#darkModeToggle');
+  const body = select('body');
+
+  // Check local storage for theme preference
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+  }
+
+  if (darkModeToggle) {
+    const icon = darkModeToggle.querySelector('i');
+
+    // Initial State Check
+    if (body.classList.contains('dark-mode')) {
+        if(icon) {
+            icon.classList.remove('bi-moon');
+            icon.classList.add('bi-sun');
+        }
+        darkModeToggle.innerHTML = '<i class="bi bi-sun"></i> Light Mode';
+    }
+
+    on('click', '#darkModeToggle', function(e) {
+      e.preventDefault();
+      body.classList.toggle('dark-mode');
+
+      const isDarkMode = body.classList.contains('dark-mode');
+      localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+
+      // Update Button
+      if (isDarkMode) {
+         this.innerHTML = '<i class="bi bi-sun"></i> Light Mode';
+      } else {
+         this.innerHTML = '<i class="bi bi-moon"></i> Dark Mode';
+      }
+    });
+  }
+
 })()
