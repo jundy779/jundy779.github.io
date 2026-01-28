@@ -66,7 +66,7 @@ body.dark-mode {
   --md-sys-color-outline: #8d9199;
 }
 
-/* Global Overrides */
+/* Global Resets */
 body {
   background-color: var(--md-sys-color-background);
   color: var(--md-sys-color-on-background);
@@ -89,7 +89,7 @@ a:hover {
   color: var(--md-sys-color-tertiary);
 }
 
-/* Buttons */
+/* Material 3 Buttons */
 .btn {
   border-radius: var(--md-sys-shape-corner-extra-large);
   padding: 10px 24px;
@@ -101,6 +101,7 @@ a:hover {
   transition: all 0.2s ease;
 }
 
+/* Filled Button */
 .btn-primary {
   background-color: var(--md-sys-color-primary);
   color: var(--md-sys-color-on-primary);
@@ -109,155 +110,39 @@ a:hover {
 .btn-primary:hover {
   background-color: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-on-primary-container);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-/* Navbar Overrides */
-#header {
+/* Outlined Button */
+.btn-outline-primary {
   background-color: transparent;
-}
-
-#navbar {
-  background: var(--md-sys-color-surface);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-  border-radius: 0 0 var(--md-sys-shape-corner-large) var(--md-sys-shape-corner-large);
-  margin: 0 16px; /* Floating effect */
-  padding: 12px 24px;
-  top: 16px;
-  transition: all 0.3s ease;
-}
-
-body.dark-mode #navbar {
-  background: var(--md-sys-color-surface-variant);
-  color: var(--md-sys-color-on-surface-variant);
-}
-
-#navbar .navbar-brand {
+  border: 1px solid var(--md-sys-color-outline);
   color: var(--md-sys-color-primary);
-  font-weight: 700;
-  text-transform: none; /* Modernizing */
-  font-size: 1.5rem;
 }
 
-body.dark-mode #navbar .navbar-brand {
-  color: var(--md-sys-color-on-surface);
-}
-
-#navbar .nav-link {
-  color: var(--md-sys-color-on-surface-variant);
-  font-weight: 500;
-  border-radius: var(--md-sys-shape-corner-extra-large);
-  padding: 8px 16px;
-  margin: 0 4px;
-}
-
-#navbar .nav-link:hover, #navbar .nav-link.active {
+.btn-outline-primary:hover {
   background-color: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-on-primary-container);
-  transform: none; /* Resetting original transform */
+  border-color: var(--md-sys-color-primary-container);
 }
 
-#navbar .btn-contact {
-  background-color: var(--md-sys-color-tertiary);
-  color: var(--md-sys-color-on-tertiary);
+/* Secondary Button */
+.btn-secondary {
+  background-color: var(--md-sys-color-secondary);
+  color: var(--md-sys-color-on-secondary);
 }
 
-#navbar .btn-contact:hover {
-  background-color: var(--md-sys-color-tertiary-container);
-  color: var(--md-sys-color-on-tertiary-container);
+.btn-secondary:hover {
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
 }
 
-/* Hero Section */
-#hero {
-  background: linear-gradient(135deg, var(--md-sys-color-primary-container) 0%, var(--md-sys-color-background) 100%) !important;
-  color: var(--md-sys-color-on-background) !important;
-}
-
-body.dark-mode #hero {
-  background: linear-gradient(135deg, #0f1824 0%, #1a1c1e 100%) !important;
-}
-
-body.dark-mode #hero:before {
-  background: rgba(0, 0, 0, 0.3); /* Dark overlay instead of white */
-}
-
-#hero h1 {
-  color: var(--md-sys-color-primary) !important;
-  text-shadow: none !important;
-  font-weight: 800;
-}
-
-body.dark-mode #hero h1 {
-  color: var(--md-sys-color-primary) !important;
-}
-
-#hero p {
-  color: var(--md-sys-color-on-surface-variant) !important;
-  text-shadow: none !important;
-}
-
-#hero .social-links a {
-  background-color: var(--md-sys-color-surface-variant);
-  color: var(--md-sys-color-on-surface-variant) !important;
-  width: 48px;
-  height: 48px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-#hero .social-links a:hover {
-  background-color: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary) !important;
-}
-
-/* Section Titles */
-.section-title h2 {
-  color: var(--md-sys-color-primary);
-}
-
-.section-title h2::after {
-  background: var(--md-sys-color-primary);
-}
-
-/* About Section */
-.about .content h3 {
-  color: var(--md-sys-color-primary);
-}
-
-/* Skills */
-.skills .progress {
-  background-color: var(--md-sys-color-surface-variant);
-  border-radius: var(--md-sys-shape-corner-small);
-  height: 8px; /* Thinner M3 style */
-}
-
-.skills .progress-bar {
-  background-color: var(--md-sys-color-primary);
-  border-radius: var(--md-sys-shape-corner-small);
-}
-
-/* Resume */
-.resume .resume-title {
-  color: var(--md-sys-color-primary);
-}
-
-.resume .resume-item {
-  border-left: 2px solid var(--md-sys-color-outline);
-}
-
-.resume .resume-item::before {
-  background: var(--md-sys-color-background);
-  border: 2px solid var(--md-sys-color-primary);
-}
-
+/* Material 3 Cards */
 .card {
   background-color: var(--md-sys-color-surface);
   border: 1px solid var(--md-sys-color-outline);
   border-radius: var(--md-sys-shape-corner-large);
-  box-shadow: none; /* M3 defaults to flat/outline for cards usually, or elevation */
+  box-shadow: none;
 }
 
 body.dark-mode .card {
@@ -267,124 +152,6 @@ body.dark-mode .card {
 
 body.dark-mode .card h4, body.dark-mode .card h5, body.dark-mode .card p, body.dark-mode .card li {
   color: var(--md-sys-color-on-surface-variant);
-}
-
-body.dark-mode .resume-item h4 {
-    color: var(--md-sys-color-primary);
-}
-body.dark-mode .resume-item h5 {
-    background: var(--md-sys-color-surface-variant);
-    color: var(--md-sys-color-on-surface-variant);
-}
-
-/* Services / Icons */
-.services .icon-box {
-  border-radius: var(--md-sys-shape-corner-large);
-  background-color: var(--md-sys-color-surface);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-.services .icon-box:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  transform: translateY(-5px);
-}
-
-/* Contact */
-.contact .info {
-  background-color: var(--md-sys-color-surface);
-  color: var(--md-sys-color-on-surface);
-  padding: 30px;
-  border-radius: var(--md-sys-shape-corner-large);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-}
-
-.contact .info i {
-  background-color: var(--md-sys-color-primary-container);
-  color: var(--md-sys-color-on-primary-container);
-}
-
-.contact .php-email-form {
-  background-color: var(--md-sys-color-surface);
-  padding: 30px;
-  border-radius: var(--md-sys-shape-corner-large);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-}
-
-.contact .php-email-form button[type=submit] {
-  background: var(--md-sys-color-primary);
-  border-radius: 100px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: var(--md-sys-color-primary-container);
-  color: var(--md-sys-color-on-primary-container);
-}
-
-/* Footer Overrides */
-#footer {
-  background-color: #333 !important;
-  color: #fff !important;
-  padding: 40px 0;
-  font-size: 0.9rem;
-}
-
-#footer h3 {
-  color: #ffde59;
-}
-
-#footer .social-links a {
-  font-size: 1.5rem !important;
-  width: auto !important;
-  height: auto !important;
-  background: none !important;
-  color: #fff !important;
-  margin: 0 10px;
-}
-
-#footer .social-links a:hover {
-  color: var(--md-sys-color-primary) !important;
-}
-
-.divider {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  margin: 20px auto;
-  width: 60%;
-}
-
-/* Dark Mode Specific Tweaks */
-body.dark-mode .section-bg {
-  background-color: var(--md-sys-color-background);
-}
-
-body.dark-mode .bg-light {
-    background-color: var(--md-sys-color-background) !important;
-}
-
-body.dark-mode .contact .info,
-body.dark-mode .contact .php-email-form {
-    background-color: var(--md-sys-color-surface-variant);
-}
-
-body.dark-mode .form-control {
-    background-color: var(--md-sys-color-surface);
-    border-color: var(--md-sys-color-outline);
-    color: var(--md-sys-color-on-surface);
-}
-
-body.dark-mode footer {
-    background-color: #000000 !important;
-    color: var(--md-sys-color-on-surface-variant);
-}
-
-/* FAB for Back to Top */
-.back-to-top {
-    background: var(--md-sys-color-primary);
-    border-radius: 16px; /* M3 small FAB */
-}
-.back-to-top:hover {
-    background: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
 }
 
 /* Dark Mode Toggle Button */
@@ -405,6 +172,7 @@ body.dark-mode footer {
     display: flex;
     align-items: center;
     gap: 8px;
+    font-family: var(--md-sys-typescale-body-font);
 }
 
 #darkModeToggle:hover {
